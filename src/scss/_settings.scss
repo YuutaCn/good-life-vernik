@@ -1,0 +1,184 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.page {
+  height: 100%;
+  font-family: var(--font-inter, sans-serif);
+  -webkit-text-size-adjust: 100%;
+}
+
+::selection {
+  background: var(--gray-color);
+  /* Safari */
+}
+
+::-moz-selection {
+  background: var(--gray-color);
+  /* Firefox */
+}
+
+.page__body {
+  margin: 0;
+  min-width: 300px;
+  min-height: 100%;
+  font-size: #{rem(16)};
+  background: var(--white-color);
+
+  &_disabled {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.site-container {
+  overflow: hidden; // если на сайте position: sticky - убрать эту настройку
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+}
+
+.button {
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.input {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: var(--white-color);
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-width);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+button,
+input,
+ul,
+ol,
+li,
+a {
+  padding: 0;
+  margin: 0;
+  color: var(--dark-color);
+}
+
+a.label {
+  z-index: 1;
+  padding: #{rem(2)} #{rem(5)};
+  background: var(--white-color);
+  border-radius: #{rem(2)};
+  font-family: var(--font-inter);
+  font-style: normal;
+  font-weight: 400;
+  font-size: #{rem(10)};
+  line-height: #{rem(12)};
+  letter-spacing: -0.019em;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+  transition: transform .15s var(--cubic-bezier),
+    color .15s var(--cubic-bezier),
+    background .15s var(--cubic-bezier);
+
+  &:hover,
+  &:focus {
+    outline: none;
+    transform: translateY(#{rem(-2)});
+    color: var(--light-color);
+    background: var(--dark-color);
+  }
+}
+
+a {
+  cursor: pointer;
+}
+
+h1 {
+  font-family: var(--font-neue);
+  font-style: normal;
+  font-weight: 700;
+  font-size: Min(Max(#{rem(16)}, 2.22vw), #{rem(32)});
+  line-height: Min(Max(#{rem(15)}, 2.22vw), #{rem(31)});
+}
+
+h2 {
+  font-family: var(--font-neue);
+  font-style: normal;
+  font-weight: 700;
+  font-size: #{rem(24)};
+  line-height: #{rem(23)};
+}
+
+h3 {
+  font-family: var(--font-neue);
+  font-style: normal;
+  font-weight: 700;
+  font-size: Min(Max(#{rem(14)}, 2.22vw), #{rem(16)});
+  line-height: Min(Max(#{rem(14)}, 2.22vw), #{rem(15)});
+}
+
+h4 {
+  font-family: var(--font-neue);
+  font-style: normal;
+  font-weight: 700;
+  font-size: #{rem(12)};
+  line-height: #{rem(12)};
+}
