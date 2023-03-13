@@ -32,10 +32,8 @@
   justify-content: space-between;
 }
 
-$browser-context: 16; // Default
-
-@function rem($pixels, $context: $browser-context) {
-  @return #{$pixels/$context}rem;
+@function rem($pixels) {
+  @return #{$pixels/16}rem;
 }
 
 @mixin image-set($pathToImage) {

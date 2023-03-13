@@ -1,4 +1,3 @@
-@function rem($px) {
-  $result: calc($px / 16) + rem;
-  @return $result;
+@function rem($pixels) {
+  @return #{$pixels/16}rem;
 }

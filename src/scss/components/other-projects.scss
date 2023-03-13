@@ -1,0 +1,84 @@
+@import '../_mixins.scss';
+
+.projects {
+  width: 100%;
+  height: auto;
+  background-color: #151515;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    gap: rem(30);
+    font-family: var(--font-inter);
+    font-style: normal;
+    font-weight: 400;
+    font-size: rem(10);
+    line-height: rem(20);
+    letter-spacing: -0.009em;
+
+    @include mobile {
+      gap: rem(10);
+      flex-direction: column;
+    }
+  }
+
+  &__title {
+    color: var(--white-color);
+    font-weight: 700;
+
+    @include mobile {
+      font-weight: 400;
+    }
+
+    &_active {
+      font-weight: 700;
+    }
+
+
+    &::after {
+      content: ':';
+
+      @include mobile {
+        content: '';
+      }
+    }
+  }
+
+  & .list {
+    display: flex;
+    flex-direction: row;
+    gap: rem(30);
+
+    @include mobile {
+      display: none;
+      gap: rem(10);
+      flex-direction: column;
+      margin-left: rem(10);
+      margin-bottom: rem(10);
+    }
+
+    &_active {
+      display: flex;
+    }
+
+    & a {
+      color: var(--white-color);
+      cursor: pointer;
+
+      background-image: linear-gradient(var(--white-color), var(--white-color));
+      background-position: 0% 100%;
+      background-repeat: no-repeat;
+      background-size: 0% 1px;
+      transition: background-size .15s var(--cubic-bezier),
+        background .15s var(--cubic-bezier);
+
+      @include hover {
+        background-size: 100% 1px;
+      }
+
+      &:focus {
+        background-size: 100% 1px;
+      }
+    }
+  }
+}

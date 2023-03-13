@@ -10,17 +10,90 @@
 
   <link rel="stylesheet" href="/css/vendor.min.css">
   <link rel="stylesheet" href="/css/main.min.css">
-
-  <script defer src="/js/lib/swiper.min.js"></script>
-  <script defer src="/js/main.min.js"></script>
 </head>
 
 <body class="page__body">
   <div class="site-container">
+
+    <link rel="stylesheet" href="/css/components/header.min.css">
     <header class="header">
 
-      <div class="header__container container"></div>
+      <div class="header__container container">
+
+        <div class="burger">
+          <button class="burger__button button" aria-label="Открыть меню" aria-expanded="false"  data-burger>
+            <span class="button__line"></span>
+          </button>
+        </div>
+
+        <a class="header__title" href="/">Сытая жизнь</a>
+
+        <div class="user-menu">
+          <button class="user-menu__login login button">
+            <span class="login__text">Зарегистрироваться / Войти</span>
+            <svg class="login__image">
+              <use xlink:href="/img/svg/login.svg#1"></use>
+            </svg>
+          </button>
+          <a class="user-menu__basket basket button">
+            <span class="basket__text">Корзина (0)</span>
+            <svg class="basket__image">
+              <use xlink:href="/img/svg/basket.svg#1"></use>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
+      <nav class="header__nav nav container">
+        <ul class="nav__list list">
+          <li class="list__item">
+            <a class="list__link" href="/">Аксессуары</a>
+            <!--#include virtual="/partials/header/open-menu.html" -->
+          </li>
+          <li class="list__item">
+            <a class="list__link" href="/">Антиквариат</a>
+            <!--#include virtual="/partials/header/open-menu copy.html" -->
+          </li>
+          <li class="list__item">
+            <a class="list__link" href="/">Кошельки</a>
+            <!--#include virtual="/partials/header/open-menu copy 2.html" -->
+          </li>
+          <li class="list__item">
+            <a class="list__link" href="/">Обувь</a>
+            <!--#include virtual="/partials/header/open-menu copy 3.html" -->
+          </li>
+          <li class="list__item">
+            <a class="list__link" href="/">Одежда</a>
+            <!--#include virtual="/partials/header/open-menu copy 4.html" -->
+          </li>
+          <li class="list__item">
+            <a class="list__link" href="/">Сумки</a>
+            <!--#include virtual="/partials/header/open-menu copy 5.html" -->
+          </li>
+          <li class="list__item">
+            <a class="list__link" href="/">Транспорт</a>
+            <!--#include virtual="/partials/header/open-menu copy 6.html" -->
+          </li>
+          <li class="list__item">
+            <a class="list__link" href="/">Часы</a>
+            <!--#include virtual="/partials/header/open-menu copy 7.html" -->
+          </li>
+          <li class="list__item">
+            <a class="list__link" href="/">Украшения</a>
+            <!--#include virtual="/partials/header/open-menu copy 8.html" -->
+          </li>
+        </ul>
+        <form class="search" action="/search" method="post">
+          <button class="button" type="submit" name="поиск">
+            <svg>
+              <use xlink:href="/img/svg/search.svg#1"></use>
+            </svg>
+          </button>
+          <input type="search" name="search" minlength="2" required placeholder="Поиск">
+        </form>
+      </nav>
 
     </header>
-
     <main>
+
