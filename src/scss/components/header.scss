@@ -76,12 +76,13 @@
 
     &_fat {
       padding-left: rem(10);
-      border-left: solid 1px var(--dark-color);
+      border: solid 1px var(--dark-color);
+      border-width: 0 0 0 1px;
       font-weight: 700;
 
       @include small-tablet {
         padding-left: 0;
-        border-left: none;
+        border-width: 0;
       }
     }
   }
@@ -190,8 +191,8 @@
   }
 
   &__button {
-    width: rem(17);
-    height: rem(17);
+    width: rem(18);
+    height: rem(18);
 
     & svg {
       width: 100%;
@@ -290,6 +291,22 @@
     align-items: center;
     position: relative;
 
+    &_active {
+
+      & .burger__line {
+        width: 0;
+        opacity: 0;
+      }
+
+      &::before {
+        transform: translateY(-5px) rotate(45deg);
+      }
+
+      &::after {
+        transform: translateY(5px) rotate(-45deg);
+      }
+    }
+
     @include small-tablet {
       width: rem(15);
       height: rem(11);
@@ -302,6 +319,7 @@
       width: 100%;
       height: 1px;
       background: var(--light-dark-color);
+      transition: transform .15s var(--cubic-bezier);
     }
 
     &::after {
@@ -319,6 +337,8 @@
     width: 100%;
     height: 1px;
     background: var(--light-dark-color);
+    transition: width .15s var(--cubic-bezier),
+    opacity .15s var(--cubic-bezier);
   }
 }
 

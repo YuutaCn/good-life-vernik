@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/css/main.min.css">
   <link rel="stylesheet" href="/css/components/header.min.css">
   <link rel="stylesheet" href="/css/components/footer.min.css">
+  <link rel="stylesheet" href="/css/components/burger-menu.min.css">
 </head>
 
 <body class="page__body">
@@ -88,22 +89,24 @@
 
         <form class="search" action="/search" method="post">
           <button class="search__button button" type="submit" aria-label="поиск">
-            <svg>
-              <use xlink:href="/img/svg/search.svg#1"></use>
-            </svg>
+            <img src="/img/svg/search.svg" alt="поиск">
           </button>
           <input class="search__input" type="search" name="search" minlength="2" required placeholder="Поиск">
         </form>
 
-        <button class="catalog-button button">Каталог
+        <button class="catalog-button button" data-catalog>Каталог
           <img src="/img/svg/arrow-small.svg" alt="стрелка каталога">
         </button>
-        <button class="search-button button" aria-label="поиск">
+
+        <button class="search-button button" aria-label="поиск" data-search>
           <svg>
             <use xlink:href="/img/svg/search.svg#1"></use>
           </svg>
         </button>
       </nav>
+
+
+    <!--#include virtual="/partials/burger-menu.html" -->
 
     </header>
     <main>

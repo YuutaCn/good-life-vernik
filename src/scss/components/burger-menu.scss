@@ -1,0 +1,121 @@
+@import '../_mixins.scss';
+
+.burger-menu {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  margin-top: rem(-51);
+  width: 100%;
+  min-height: calc(100vh - rem(65));
+  max-height: calc(100vh);
+  overflow: scroll;
+  background: var(--white-color);
+  transition: opacity .05s var(--cubic-bezier),
+  visibility .05s var(--cubic-bezier) ;
+
+  &_active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__list {
+    display: none;
+  }
+
+  &__search {
+    width: 100%;
+    display: flex;
+    border-bottom: solid 1px var(--light-dark-color);
+    padding-top: rem(18);
+    padding-bottom: rem(15);
+    padding-left: rem(20);
+  }
+
+  &__input {
+    border: none;
+    width: 100%;
+    font-size: rem(16);
+    line-height: rem(20);
+
+    &::placeholder {
+      font-size: rem(16);
+      line-height: rem(20);
+    }
+  }
+
+  &__header {
+    padding: rem(18) 0;
+    margin: 0  var(--container-offset);
+    border-bottom: solid 1px var(--light-dark-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__button {
+    display: none;
+
+    @include small-tablet {
+      display: flex;
+      font-size: rem(16);
+      padding-left: rem(10);
+      border-width: 0px 0px 0px 1px;
+    }
+  }
+
+  &__close {
+    height: rem(24);
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    gap: rem(10);
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 500;
+  }
+
+  &__login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: rem(45);
+    margin-bottom: rem(100);
+
+    & span {
+      font-weight: 500;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    & ul {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+      margin: 0  var(--container-offset);
+
+      & li {
+
+        & a {
+          display: flex;
+          width: 100%;
+          padding: rem(15) 0;
+          border-bottom: solid 1px var(--light-color);
+          font-style: normal;
+          font-weight: 500;
+          font-size: rem(16);
+          line-height: rem(20);
+          letter-spacing: -0.009em;
+        }
+      }
+
+      ul {
+         display: none;
+      }
+    }
+  }
+}
