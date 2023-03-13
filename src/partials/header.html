@@ -85,13 +85,22 @@
           </li>
         </ul>
         <form class="search" action="/search" method="post">
-          <button class="button" type="submit" name="поиск">
+          <button class="button" type="submit" aria-label="поиск">
             <svg>
               <use xlink:href="/img/svg/search.svg#1"></use>
             </svg>
           </button>
           <input type="search" name="search" minlength="2" required placeholder="Поиск">
         </form>
+
+        <button class="catalog-button button">Каталог
+          <img src="/img/svg/arrow-small.svg" alt="стрелка каталога">
+        </button>
+        <button class="search-button button" aria-label="поиск">
+          <svg>
+            <use xlink:href="/img/svg/search.svg#1"></use>
+          </svg>
+        </button>
       </nav>
 
     </header>

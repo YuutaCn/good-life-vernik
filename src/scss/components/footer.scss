@@ -17,6 +17,14 @@
     font-size: rem(12);
     line-height: 140%;
     letter-spacing: -0.009em;
+
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+    }
   }
 
   & .list {
@@ -26,7 +34,7 @@
     gap: rem(15);
 
     & a {
-      font-weight: 400;
+      font-weight: 300;
       color: var(--white-color);
       outline: none;
 
@@ -49,17 +57,29 @@
     & li {
       font-weight: 700;
       color: var(--white-color);
+
+      @include mobile {
+        font-size: rem(14);
+      }
     }
   }
 
   &__company {
     grid-column: 1/3;
     grid-row: 1/3;
+
+    @include mobile {
+      text-align: center;
+    }
   }
 
   &__help {
     grid-column: 3/6;
     grid-row: 1/3;
+
+    @include mobile {
+      text-align: center;
+    }
   }
 
   &__form {
@@ -70,9 +90,19 @@
     gap: rem(20);
     height: auto;
 
+    @include mobile {
+      width: 100%;
+      max-width: rem(420);
+    }
+
     & p {
       font-weight: 700;
       color: var(--white-color);
+
+      @include mobile {
+        text-align: center;
+        font-size: rem(14);
+      }
     }
 
     & button {
@@ -97,19 +127,33 @@
       letter-spacing: -0.022em;
       color: var(--white-color);
 
+      @include mobile {
+        text-align: center;
+      }
+
       &:active,
       &:focus {
 
         &::placeholder {
           padding-left: 110%;
           opacity: 0;
+
+          @include mobile {
+            padding-left: 0;
+            transform: scale(2.4);
+          }
         }
       }
 
       &::placeholder {
         color: var(--white-color);
         transition: padding .15s var(--cubic-bezier),
-        opacity .15s var(--cubic-bezier);
+        opacity .15s var(--cubic-bezier),
+        transform .15s var(--cubic-bezier);
+
+        @include mobile {
+          text-align: center;
+        }
       }
     }
   }
@@ -149,5 +193,9 @@
     grid-column: 8/13;
     grid-row: 3/3;
     text-align: end;
+
+    @include mobile {
+      text-align: center;
+    }
   }
 }

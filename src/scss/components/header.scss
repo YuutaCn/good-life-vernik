@@ -139,6 +139,26 @@
   justify-content: space-between;
   align-items: center;
 
+  &::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    margin-bottom: rem(60);
+    background: var(--light-dark-color);
+    position: absolute;
+
+    @include small-tablet {
+      margin-bottom: rem(54);
+    }
+  }
+
+  @include small-tablet {
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+  }
+
   & .search {
     display: flex;
     justify-content: center;
@@ -146,6 +166,10 @@
     flex-direction: row;
     gap: rem(11);
     margin-bottom: 0;
+
+    @include small-tablet {
+      display: none;
+    }
 
     & button {
       width: rem(17);
@@ -197,6 +221,10 @@
     display: flex;
     flex-direction: row;
 
+    @include small-tablet {
+      display: none;
+    }
+
     &__item {
 
       &:hover {
@@ -245,6 +273,10 @@
     margin-top: 1px;
     transition: opacity .0s var(--cubic-bezier),
     visibility .0s var(--cubic-bezier);
+
+    @include small-tablet {
+      display: none;
+    }
 
     & ul {
       list-style: none;
@@ -323,6 +355,49 @@
       }
 
 
+    }
+  }
+
+  .catalog-button {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: rem(10);
+    font-family: var(--font-inter);
+    font-style: normal;
+    font-weight: 700;
+    font-size: rem(14);
+    line-height: rem(17);
+    text-align: center;
+    letter-spacing: -0.019em;
+    color: var(--dark-color);
+    position: relative;
+
+    & img {
+      width: auto;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    @include small-tablet {
+      display: flex;
+    }
+  }
+
+  .search-button {
+    display: none;
+    width: rem(20);
+    height: rem(20);
+
+    & svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include small-tablet {
+      display: flex;
     }
   }
 }
