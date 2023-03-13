@@ -52,6 +52,9 @@ a {
 .site-container {
   overflow: hidden; // если на сайте position: sticky - убрать эту настройку
   min-height: 100vh;
+  display: flex;
+  position: relative;
+  flex-direction: column;
 }
 
 footer {
@@ -84,6 +87,13 @@ footer {
   &::-webkit-search-results-decoration {
     display: none;
   }
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
 }
 
 .visually-hidden {
@@ -181,4 +191,49 @@ h4 {
   font-weight: 700;
   font-size: #{rem(12)};
   line-height: #{rem(12)};
+}
+
+.button_primary {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: var(--dark-color);
+  border: solid 1px var(--dark-color);
+  cursor: pointer;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+
+  font-family: var(--font-inter);
+  font-style: normal;
+  font-weight: 700;
+  font-size: rem(16);
+  line-height: rem(19);
+  text-align: center;
+  letter-spacing: -0.019em;
+  color: var(--light-color);
+  outline: none;
+
+  transition: background .05s var(--cubic-bezier),
+              border .05s var(--cubic-bezier),
+              color .05s var(--cubic-bezier);
+
+  @include hover {
+    background: var(--light-dark-color);
+    border-color: var(--gray-color);
+  }
+
+  &:focus,
+  &:active {
+    background: transparent;
+    border-color: var(--dark-color);
+  }
+
+  &:disabled {
+    color: var(--gray-color);
+    border-color: var(--gray-color);
+  }
+}
+
+form {
+  margin: 0;
 }
