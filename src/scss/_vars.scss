@@ -3,14 +3,9 @@
   // base
   --font-neue: "Neue Machina", sans-serif;
   --font-inter: "Inter", sans-serif;
-  --content-width: #{rem(1920)};
-  --container-offset: #{rem(135)};
+  --content-width: #{rem(1170)};
+  --container-offset: #{rem(20)};
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
-
-  @media (max-width: (#{rem(1440)})) {
-    --content-width: #{rem(1170)};
-    --container-offset: #{rem(20)};
-  }
 
   @media (max-width: (#{rem(1200)})) {
     --container-offset: #{rem(15)};

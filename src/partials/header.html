@@ -10,19 +10,20 @@
 
   <link rel="stylesheet" href="/css/vendor.min.css">
   <link rel="stylesheet" href="/css/main.min.css">
+  <link rel="stylesheet" href="/css/components/header.min.css">
+  <link rel="stylesheet" href="/css/components/footer.min.css">
 </head>
 
 <body class="page__body">
   <div class="site-container">
 
-    <link rel="stylesheet" href="/css/components/header.min.css">
     <header class="header">
 
       <div class="header__container container">
 
         <div class="burger">
-          <button class="burger__button button" aria-label="Открыть меню" aria-expanded="false"  data-burger>
-            <span class="button__line"></span>
+          <button class="burger__button button" aria-label="Открыть меню" aria-expanded="false" data-burger>
+            <span class="burger__line"></span>
           </button>
         </div>
 
@@ -85,12 +86,12 @@
           </li>
         </ul>
         <form class="search" action="/search" method="post">
-          <button class="button" type="submit" aria-label="поиск">
+          <button class="search__button button" type="submit" aria-label="поиск">
             <svg>
               <use xlink:href="/img/svg/search.svg#1"></use>
             </svg>
           </button>
-          <input type="search" name="search" minlength="2" required placeholder="Поиск">
+          <input class="search__input" type="search" name="search" minlength="2" required placeholder="Поиск">
         </form>
 
         <button class="catalog-button button">Каталог

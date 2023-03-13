@@ -82,7 +82,7 @@
     }
   }
 
-  &__form {
+  & .email {
     grid-column: 8/13;
     grid-row: 1/1;
     display: flex;
@@ -105,12 +105,12 @@
       }
     }
 
-    & button {
+    &__button {
       width: 100%;
       height: rem(40);
     }
 
-    & input {
+    &__input {
       background: transparent;
       border: solid var(--white-color);
       border-width: 0 0 1px 0;
@@ -187,15 +187,16 @@
       }
   }
 
-  & .copyright {
-    color: var(--white-color);
-    font-weight: 300;
-    grid-column: 8/13;
-    grid-row: 3/3;
-    text-align: end;
+}
 
-    @include mobile {
-      text-align: center;
-    }
+.copyright {
+  color: var(--white-color);
+  font-weight: 300;
+  grid-column: 8/13;
+  grid-row: 3/3;
+  text-align: end;
+
+  @include mobile {
+    text-align: center;
   }
 }
