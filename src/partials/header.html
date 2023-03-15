@@ -23,7 +23,7 @@
       <div class="header__container container">
 
         <div class="burger">
-          <button class="burger__button button" aria-label="Открыть меню" aria-expanded="false" data-burger>
+          <button class="burger__button button" aria-label="Открыть меню" aria-expanded="false" data-burger onclick="callBurger(this)">
             <span class="burger__line"></span>
           </button>
         </div>
@@ -94,11 +94,11 @@
           <input class="search__input" type="search" name="search" minlength="2" required placeholder="Поиск">
         </form>
 
-        <button class="catalog-button button" data-catalog>Каталог
+        <button class="catalog-button button" data-open-page="catalog" onclick="callBurger(this)">Каталог
           <img src="/img/svg/arrow-small.svg" alt="стрелка каталога">
         </button>
 
-        <button class="search-button button" aria-label="поиск" data-search>
+        <button class="search-button button" aria-label="поиск" data-open-page="catalog" onclick="callBurger(this)">
           <svg>
             <use xlink:href="/img/svg/search.svg#1"></use>
           </svg>

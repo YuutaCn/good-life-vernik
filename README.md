@@ -20,3 +20,9 @@ docker run --rm --name test-container -p 5001:80 -v ${PWD}/www:/var/www/html tes
 ```
 http://localhost:5001/
 ```
+
+docker compose up 
+
+docker compose up -d --build
+
+docker compose down 

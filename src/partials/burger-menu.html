@@ -1,11 +1,10 @@
 <div class="burger-menu" data-menu>
-  <div class="burger-menu__container" style="z-index: 100;">
+  <div class="burger-menu__container container" style="z-index: 100;">
     <div class="burger-menu__content container" data-menu-list data-content>
       <ul class="burger-menu__list list">
-        <li class="burger-menu__item">
+        <li class="burger-menu__item desktop-hidden">
           <button class="burger-menu__link burger-menu__link_arrow" data-menu-button onclick="menuNext(this)">Каталог</button>
-
-          <div class="burger-menu__content container" data-content>
+          <div class="burger-menu__content container" data-content="catalog">
             <div class="burger-menu__header">
               <button class="burger-menu__close button" data-menu-return onclick="menuPreview(this)">
                 <img src="/img/svg/return.svg" alt="назад">
@@ -42,7 +41,220 @@
                   </ul>
                   <div class="burger-menu__login">
                     <button class="user-menu__button burger-menu__button button">
-                      <span class="user-menu__text">Зарегистрироваться / Войти</span>
+                      <span class="user-menu__text burger-menu__text">Зарегистрироваться / Войти</span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="burger-menu__item">
+                <button class="burger-menu__link burger-menu__link_arrow" data-menu-button onclick="menuNext(this)">Антиквариат</button>
+                <div class="burger-menu__content container" data-content>
+                  <div class="burger-menu__header container">
+                    <button class="burger-menu__close button" data-menu-return onclick="menuPreview(this)">
+                      <img src="/img/svg/return.svg" alt="назад">
+                      Антиквариат
+                    </button>
+                  </div>
+                  <ul class="burger-menu__list">
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Солнечные очки</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Головные уборы</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Шарфы</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Перчатки</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Ремни</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Брелоки</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Другое</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Другое</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Другое</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Другое</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Другое</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Другое</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Другое</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Другое</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Другое</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Другое</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Другое</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Другое</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Другое</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Другое</a></li>
+                  </ul>
+                  <div class="burger-menu__login">
+                    <button class="user-menu__button burger-menu__button button">
+                      <span class="user-menu__text burger-menu__text">Зарегистрироваться / Войти</span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="burger-menu__item">
+                <button class="burger-menu__link burger-menu__link_arrow" data-menu-button onclick="menuNext(this)">Кошельки</button>
+                <div class="burger-menu__content container" data-content>
+                  <div class="burger-menu__header container">
+                    <button class="burger-menu__close button" data-menu-return onclick="menuPreview(this)">
+                      <img src="/img/svg/return.svg" alt="назад">
+                      Кошельки
+                    </button>
+                  </div>
+                  <ul class="burger-menu__list">
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Солнечные очки</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Головные уборы</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Шарфы</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Перчатки</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Ремни</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Брелоки</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Другое</a></li>
+                  </ul>
+                  <div class="burger-menu__login">
+                    <button class="user-menu__button burger-menu__button button">
+                      <span class="user-menu__text burger-menu__text">Зарегистрироваться / Войти</span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="burger-menu__item">
+                <button class="burger-menu__link burger-menu__link_arrow" data-menu-button onclick="menuNext(this)">Обувь</button>
+                <div class="burger-menu__content container" data-content>
+                  <div class="burger-menu__header container">
+                    <button class="burger-menu__close button" data-menu-return onclick="menuPreview(this)">
+                      <img src="/img/svg/return.svg" alt="назад">
+                      Обувь
+                    </button>
+                  </div>
+                  <ul class="burger-menu__list">
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Солнечные очки</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Головные уборы</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Шарфы</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Перчатки</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Ремни</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Брелоки</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Другое</a></li>
+                  </ul>
+                  <div class="burger-menu__login">
+                    <button class="user-menu__button burger-menu__button button">
+                      <span class="user-menu__text burger-menu__text">Зарегистрироваться / Войти</span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="burger-menu__item">
+                <button class="burger-menu__link burger-menu__link_arrow" data-menu-button onclick="menuNext(this)">Одежда</button>
+                <div class="burger-menu__content container" data-content>
+                  <div class="burger-menu__header container">
+                    <button class="burger-menu__close button" data-menu-return onclick="menuPreview(this)">
+                      <img src="/img/svg/return.svg" alt="назад">
+                      Одежда
+                    </button>
+                  </div>
+                  <ul class="burger-menu__list">
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Солнечные очки</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Головные уборы</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Шарфы</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Перчатки</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Ремни</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Брелоки</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Другое</a></li>
+                  </ul>
+                  <div class="burger-menu__login">
+                    <button class="user-menu__button burger-menu__button button">
+                      <span class="user-menu__text burger-menu__text">Зарегистрироваться / Войти</span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="burger-menu__item">
+                <button class="burger-menu__link burger-menu__link_arrow" data-menu-button onclick="menuNext(this)">Сумки</button>
+                <div class="burger-menu__content container" data-content>
+                  <div class="burger-menu__header container">
+                    <button class="burger-menu__close button" data-menu-return onclick="menuPreview(this)">
+                      <img src="/img/svg/return.svg" alt="назад">
+                      Сумки
+                    </button>
+                  </div>
+                  <ul class="burger-menu__list">
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Солнечные очки</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Головные уборы</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Шарфы</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Перчатки</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Ремни</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Брелоки</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Другое</a></li>
+                  </ul>
+                  <div class="burger-menu__login">
+                    <button class="user-menu__button burger-menu__button button">
+                      <span class="user-menu__text burger-menu__text">Зарегистрироваться / Войти</span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="burger-menu__item">
+                <button class="burger-menu__link burger-menu__link_arrow" data-menu-button onclick="menuNext(this)">Транспорт</button>
+                <div class="burger-menu__content container" data-content>
+                  <div class="burger-menu__header container">
+                    <button class="burger-menu__close button" data-menu-return onclick="menuPreview(this)">
+                      <img src="/img/svg/return.svg" alt="назад">
+                      Транспорт
+                    </button>
+                  </div>
+                  <ul class="burger-menu__list">
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Солнечные очки</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Головные уборы</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Шарфы</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Перчатки</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Ремни</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Брелоки</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Другое</a></li>
+                  </ul>
+                  <div class="burger-menu__login">
+                    <button class="user-menu__button burger-menu__button button">
+                      <span class="user-menu__text burger-menu__text">Зарегистрироваться / Войти</span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="burger-menu__item">
+                <button class="burger-menu__link burger-menu__link_arrow" data-menu-button onclick="menuNext(this)">Часы</button>
+                <div class="burger-menu__content container" data-content>
+                  <div class="burger-menu__header container">
+                    <button class="burger-menu__close button" data-menu-return onclick="menuPreview(this)">
+                      <img src="/img/svg/return.svg" alt="назад">
+                      Часы
+                    </button>
+                  </div>
+                  <ul class="burger-menu__list">
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Солнечные очки</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Головные уборы</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Шарфы</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Перчатки</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Ремни</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Брелоки</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Другое</a></li>
+                  </ul>
+                  <div class="burger-menu__login">
+                    <button class="user-menu__button burger-menu__button button">
+                      <span class="user-menu__text burger-menu__text">Зарегистрироваться / Войти</span>
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="burger-menu__item">
+                <button class="burger-menu__link burger-menu__link_arrow" data-menu-button onclick="menuNext(this)">Украшения</button>
+                <div class="burger-menu__content container" data-content>
+                  <div class="burger-menu__header container">
+                    <button class="burger-menu__close button" data-menu-return onclick="menuPreview(this)">
+                      <img src="/img/svg/return.svg" alt="назад">
+                      Украшения
+                    </button>
+                  </div>
+                  <ul class="burger-menu__list">
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Солнечные очки</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Головные уборы</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Шарфы</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Перчатки</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Ремни</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Брелоки</a></li>
+                    <li class="burger-menu__item"><a class="burger-menu__link" href="/">Другое</a></li>
+                  </ul>
+                  <div class="burger-menu__login">
+                    <button class="user-menu__button burger-menu__button button">
+                      <span class="user-menu__text burger-menu__text">Зарегистрироваться / Войти</span>
                     </button>
                   </div>
                 </div>
@@ -50,7 +262,7 @@
             </ul>
             <div class="burger-menu__login">
               <button class="user-menu__button burger-menu__button button">
-                <span class="user-menu__text">Зарегистрироваться / Войти</span>
+                <span class="user-menu__text burger-menu__text">Зарегистрироваться / Войти</span>
               </button>
             </div>
           </div>
@@ -62,7 +274,7 @@
       </ul>
       <div class="burger-menu__login">
         <button class="user-menu__button burger-menu__button button">
-          <span class="user-menu__text">Зарегистрироваться / Войти</span>
+          <span class="user-menu__text burger-menu__text">Зарегистрироваться / Войти</span>
         </button>
       </div>
     </div>
