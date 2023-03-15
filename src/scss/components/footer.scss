@@ -45,13 +45,16 @@
       transition: background-size .15s var(--cubic-bezier),
         background .15s var(--cubic-bezier);
 
-      @include hover {
-        background-size: 100% 1px;
+      @include screen {
+        &:hover {
+          background-size: 100% 1px;
+        }
+
+        &:focus {
+          background-size: 100% 1px;
+        }
       }
 
-      &:focus {
-        background-size: 100% 1px;
-      }
     }
 
     & li {
@@ -150,8 +153,8 @@
     &::placeholder {
       color: var(--white-color);
       transition: padding .15s var(--cubic-bezier),
-      opacity .15s var(--cubic-bezier),
-      transform .15s var(--cubic-bezier);
+        opacity .15s var(--cubic-bezier),
+        transform .15s var(--cubic-bezier);
 
       @include mobile {
         text-align: center;
@@ -167,26 +170,26 @@
   flex-direction: row;
   gap: rem(10);
 
-    & a {
-      display: flex;
-      width: rem(20);
-      height: rem(20);
-      transition: opacity .15s var(--cubic-bezier);
+  & a {
+    display: flex;
+    width: rem(20);
+    height: rem(20);
+    transition: opacity .15s var(--cubic-bezier);
 
-      &:hover,
-      &:focus {
-        outline: none;
-        opacity: .7;
-        background-size: 0;
-      }
-
-      & img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        object-position: center;
-      }
+    &:hover,
+    &:focus {
+      outline: none;
+      opacity: .7;
+      background-size: 0;
     }
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
 }
 
 .copyright {

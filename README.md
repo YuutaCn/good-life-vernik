@@ -1,28 +1,17 @@
 
-# docker ssi
+# Docker ssi
 
-Build with:
+## First start:
 ```
-docker build -t vernik-image .
-
-Example:
-docker build -t test-image .
-```
-
-Run with:
-```
-docker run --rm --name vernik-container -p 5001:80 -v ${PWD}/www:/var/www/html vernik-image
-
-Example:
-docker run --rm --name test-container -p 5001:80 -v ${PWD}/www:/var/www/html test-image
+1. npm install
+2. gulp
+3. docker compose up 
 ```
 
+## Next launches:
 ```
+1. gulp
+2. docker compose up 
+```
+
 http://localhost:5001/
-```
-
-docker compose up 
-
-docker compose up -d --build
-
-docker compose down 

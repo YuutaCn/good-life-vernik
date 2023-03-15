@@ -62,6 +62,7 @@
     }
 
   }
+
   &__link {
     color: var(--white-color);
     cursor: pointer;
@@ -74,12 +75,14 @@
     transition: background-size .15s var(--cubic-bezier),
       background .15s var(--cubic-bezier);
 
-    @include hover {
-      background-size: 100% 1px;
-    }
+    @include screen {
+      &:hover {
+        background-size: 100% 1px;
+      }
 
-    &:focus {
-      background-size: 100% 1px;
+      &:focus {
+        background-size: 100% 1px;
+      }
     }
   }
 }

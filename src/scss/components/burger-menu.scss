@@ -39,8 +39,8 @@
       font-family: var(--font-inter);
       font-style: normal;
       font-weight: 700;
-      font-size: min(max(1rem,2.22vw),2rem);
-      line-height: min(max(1.1875rem,2.22vw),2.4375rem);
+      font-size: min(max(1rem, 2.22vw), 2rem);
+      line-height: min(max(1.1875rem, 2.22vw), 2.4375rem);
       text-align: center;
       letter-spacing: -.022em;
       color: #1E1E1E;
@@ -123,7 +123,7 @@
     display: flex;
     flex-direction: column;
     margin-left: auto;
-    margin-right: 5px;
+    margin-right: rem(5);
 
     @include small-tablet {
       margin: 0;
@@ -141,8 +141,6 @@
     display: flex;
     flex-direction: column;
     list-style: none;
-    padding-top: rem(15);
-    padding-bottom: rem(30);
     padding-left: 0;
     padding-right: 0;
 
@@ -156,7 +154,7 @@
   &__list {
     display: flex;
     flex-direction: column;
-    width: 356px;
+    width: rem(356);
 
     @include small-tablet {
       width: 100%;
@@ -187,6 +185,10 @@
 
     @include small-tablet {
       font-weight: 500;
+    }
+
+    @include hover {
+      background: var(--light-color);
     }
 
     &_arrow {

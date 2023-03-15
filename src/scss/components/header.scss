@@ -84,17 +84,20 @@
     letter-spacing: -0.022em;
     outline: none;
 
-    @include hover {
-      .user-menu__text {
-        background-size: 100% 1px;
+    @include screen {
+      &:hover {
+        .user-menu__text {
+          background-size: 100% 1px;
+        }
+      }
+
+      &:focus {
+        .user-menu__text {
+          background-size: 100% 1px;
+        }
       }
     }
 
-    &:focus {
-      .user-menu__text {
-        background-size: 100% 1px;
-      }
-    }
 
     &_fat {
       padding-left: rem(10);
@@ -315,15 +318,17 @@
     position: relative;
     outline: none;
 
-    @include hover {
-      & .burger__line {
-        width: 66%;
-      }
-    }
+    @include screen {
 
-    @media (hover: hover) {
+      &:hover {
+        & .burger__line {
+          width: 66%;
+        }
+      }
+
       &:focus {
         transform: scale(1.1);
+
         & .burger__line {
           width: 66%;
         }
@@ -385,7 +390,7 @@
     height: 1px;
     background: var(--light-dark-color);
     transition: width .15s var(--cubic-bezier),
-    opacity .15s var(--cubic-bezier);
+      opacity .15s var(--cubic-bezier);
   }
 }
 
@@ -469,14 +474,17 @@
         transition: background-size .15s var(--cubic-bezier),
           background .15s var(--cubic-bezier);
 
-        @include hover {
-          background-size: 100% 1px;
-          filter: drop-shadow(0 0 0 var(--dark-color));
+        @include screen {
+          &:hover {
+            background-size: 100% 1px;
+            filter: drop-shadow(0 0 0 var(--dark-color));
+          }
+
+          &:focus {
+            background-size: 100% 1px;
+          }
         }
 
-        &:focus {
-          background-size: 100% 1px;
-        }
       }
     }
 
