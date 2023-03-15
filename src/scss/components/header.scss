@@ -321,10 +321,12 @@
       }
     }
 
-    &:focus {
-      transform: scale(1.1);
-      & .burger__line {
-        width: 66%;
+    @media (hover: hover) {
+      &:focus {
+        transform: scale(1.1);
+        & .burger__line {
+          width: 66%;
+        }
       }
     }
 

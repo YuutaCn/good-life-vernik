@@ -1,6 +1,6 @@
 const menuList = document.querySelector('[data-menu-list]'),
   burgerMenu = document.querySelector('[data-menu]'),
-  burgerButton = document.querySelector('[data-burger]');
+  burgerButton = document.querySelectorAll('[data-burger]');
 
 let contentIndex = 0;
 let menuStatus = false;
@@ -36,7 +36,9 @@ function menuOpen(button) {
     burgerMenu.insertBefore(container, currentDiv);
   };
   menuStatus = true;
-  burgerButton.classList.add('burger__button_active');
+  burgerButton.forEach(el => {
+    el.classList.add('burger__button_active');
+  })
   burgerMenu.classList.add('burger-menu_active');
   document.querySelector('.page__body').classList.add('page__body_disabled');
 };
@@ -49,7 +51,9 @@ function menuClose(button) {
     }
     contentIndex = 0;
   };
-  burgerButton.classList.remove('burger__button_active');
+  burgerButton.forEach(el => {
+    el.classList.remove('burger__button_active');
+  })
   burgerMenu.classList.remove('burger-menu_active');
   document.querySelector('.page__body').classList.remove('page__body_disabled');
 };

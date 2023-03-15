@@ -5,22 +5,50 @@
   visibility: hidden;
   display: flex;
   position: absolute;
+  top: 0;
   left: 0;
-  width: 100%;
-  margin-top: rem(-60);
+  min-width: 38vw;
+  height: 100vh;
   z-index: 4;
-  background: var(--light-color);
-  filter: drop-shadow(2px 11px 20px rgba(16, 24, 32, .10));
+  background: var(--white-color);
+  box-shadow: 2px 4px 10px rgba(16, 24, 32, 0.25);
   transition: opacity .05s var(--cubic-bezier),
     visibility .05s var(--cubic-bezier);
 
-    @include small-tablet {
-      margin-top: rem(-51);
-      min-height: calc(100vh - rem(65));
-      max-height: calc(100vh);
-      margin-top: rem(-51);
-      padding-left: 0;
+  @include small-tablet {
+    top: auto;
+    width: 100%;
+    margin-top: rem(-51);
+    min-height: calc(100vh - rem(65));
+    max-height: calc(100vh);
+    margin-top: rem(-51);
+    padding-left: 0;
+  }
+
+  &__burger {
+    display: flex;
+    align-items: center;
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+    flex-basis: auto;
+    border-bottom: solid 1px black;
+    width: 100%;
+
+    &::after {
+      content: 'hidden';
+      font-family: var(--font-inter);
+      font-style: normal;
+      font-weight: 700;
+      font-size: min(max(1rem,2.22vw),2rem);
+      line-height: min(max(1.1875rem,2.22vw),2.4375rem);
+      text-align: center;
+      letter-spacing: -.022em;
+      color: #1E1E1E;
+      white-space: nowrap;
+      opacity: 0;
     }
+  }
+
 
   &_active {
     opacity: 1;
@@ -94,6 +122,12 @@
   &__container {
     display: flex;
     flex-direction: column;
+    margin-left: auto;
+    margin-right: 5px;
+
+    @include small-tablet {
+      margin: 0;
+    }
   }
 
   &__content {
@@ -109,22 +143,23 @@
     list-style: none;
     padding-top: rem(15);
     padding-bottom: rem(30);
+    padding-left: 0;
+    padding-right: 0;
 
     @include small-tablet {
       position: absolute;
       background: var(--white-color);
-      padding-top: 0;
-      padding-bottom: 0;
+      padding: 0 var(--container-offset);
     }
   }
 
   &__list {
     display: flex;
-    flex-direction: row;
-    width: 100%;
-    gap: rem(40);
+    flex-direction: column;
+    width: 356px;
 
     @include small-tablet {
+      width: 100%;
       flex-direction: column;
       gap: 0;
     }
@@ -132,6 +167,10 @@
     & div {
       display: none;
     }
+  }
+
+  &__item {
+    width: 100%;
   }
 
   &__link {
